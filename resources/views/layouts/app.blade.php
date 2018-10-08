@@ -73,6 +73,8 @@
 {!! Html::script('front/js/bootstrap.min.js') !!}
 {!! Html::script('front/js/jquery.flexslider.js') !!}
 {!! Html::script('front/js/responsive-nav.js') !!}
+{!! Html::script('/custom/sweetalert.min.js') !!}
+@include('admin.layout.flash_messages')
 @yield('footer')
 </body>
 </html>

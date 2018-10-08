@@ -31,7 +31,7 @@ class AdminUsersController extends Controller
             'password'=>bcrypt($request->password),
 
         ]);
-        return Redirect::route('users.index');
+        return Redirect::route('users.index')->withFlashMessage('New user added Successfully');
     }
     public function edit($id)
     {
@@ -57,7 +57,7 @@ class AdminUsersController extends Controller
             $user->password =  bcrypt($request->password);
             $user->update();
         }
-        return Redirect::route('users.index');
+        return Redirect::route('users.index')->withFlashMessage('User had been updated Successfully');
     }
     public function destroy($id)
     {
@@ -65,7 +65,7 @@ class AdminUsersController extends Controller
         Donation::where('user_id',$id)->delete();
         Report::where('user_id',$id)->delete();
         $user->delete();
-        return Redirect::route('users.index');
+        return Redirect::route('users.index')->withFlashMessage('user has been removed Successfully');
     }
 
    /////////////// users Profile ///////////////
@@ -90,7 +90,7 @@ class AdminUsersController extends Controller
         $input['password'] = bcrypt($request->password);
 
         $user->update($input);
-        return Redirect::back();
+        return Redirect::back()->withFlashMessage('you have updated your profile information Successfully');
 
     }
 

@@ -40,7 +40,8 @@ class ReportController extends Controller
     {
         $user = Auth::user();
         $user->report()->create($request->all());
-        return Redirect::route('reports.show',$user->id);
+        return Redirect::route('reports.show',$user->id)
+            ->withFlashMessage('Your report submitted Successfully ,you can track your report to see what happened with this case ');
     }
 
     /**

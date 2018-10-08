@@ -17,7 +17,7 @@
     <label for="name" class="col-md-3 control-label"> Region </label>
 
     <div class="col-md-9">
-        <input id="name" type="text" class="form-control" name="place" value="{{ old('place') }}" required autofocus>
+        {!! Form::select("place",places(),null,['class'=>'form-control select2']) !!}
 
         @if ($errors->has('place'))
             <span class="help-block">

@@ -42,7 +42,7 @@ class DonationController extends Controller
     {
         $donner = Auth::user();
         $donner->donner()->create($request->all());
-        return Redirect::route('donations.show',$donner->id);
+        return Redirect::route('donations.show',$donner->id)->withFlashMessage('Your donation submitted Successfully');
     }
 
     /**

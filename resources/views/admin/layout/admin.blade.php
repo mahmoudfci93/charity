@@ -32,6 +32,8 @@
 <script src="https://code.jquery.com/jquery.js"></script>
 <script src="{{asset('admin/parsley.min.js')}}"></script>
 <script src="https://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+{!! Html::script('/custom/sweetalert.min.js') !!}
+@include('admin.layout.flash_messages')
 <script>
     $(document).ready(function () {
         $(".submenu > a").click(function (e) {

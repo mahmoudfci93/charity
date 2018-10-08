@@ -22,18 +22,18 @@ class ContactController extends Controller
     public function store(ContactRequest $request , Contact $contact)
     {
         $contact->create($request->all());
-        return Redirect::back();
+        return Redirect::back()->withFlashMessage('Your Message has been sent Successfully , thank you :)');
     }
     public function update(ContactRequest $request , $id)
     {
         $contact = Contact::findOrFail($id);
         $contact->fill($request->all())->save();
-        return Redirect::back();
+        return Redirect::back()->withFlashMessage('Message has been updated Successfully');
     }
     public function destroy($id)
     {
         Contact::findOrFail($id)->delete();
-        return Redirect::route('contact.index');
+        return Redirect::route('contact.index')->withFlashMessage('Message has been deleted Successfully');
     }
 
 
