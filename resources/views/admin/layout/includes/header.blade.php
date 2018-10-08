@@ -29,7 +29,7 @@
                     <nav class="collapse navbar-collapse bs-navbar-collapse navbar-right" role="navigation">
                         <ul class="nav navbar-nav">
                             <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-bell"></i> <b class="caret"></b></a>
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="far fa-envelope" style="font-size: 20px"></i> <b class="caret"></b></a>
                                 <ul class="dropdown-menu alert-dropdown">
                                     <li>
                                         <a href="#">New Messages <span class="label label-default">{{countUnreadMessages()}}</span></a>
