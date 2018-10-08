@@ -1,0 +1,155 @@
+/* Hiding the checkbox, but allowing it to be focused */
+.badgebox
+{
+    opacity: 0;
+}
+
+.badgebox + .badge
+{
+    /* Move the check mark away when unchecked */
+    text-indent: -999999px;
+    /* Makes the badge's width stay the same checked and unchecked */
+    width: 27px;
+}
+
+.badgebox:focus + .badge
+{
+    /* Set something to make the badge looks focused */
+    /* This really depends on the application, in my case it was: */
+
+    /* Adding a light border */
+    box-shadow: inset 0px 0px 5px;
+    /* Taking the difference out of the padding */
+}
+
+.badgebox:checked + .badge
+{
+    /* Move the check mark back when checked */
+    text-indent: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.wizard  .nav-tabs > li.active > a::after, .wizard .nav-tabs > li:hover > a::after { transform: scale(1); }
+.tab-nav > li > a::after { background: #5a4080 none repeat scroll 0% 0%; color: #fff; }
+.tab-pane { padding: 0px 0; }
+
+.wizard .nav-tabs > li  {width:5%; text-align:center;}
+
+/* check out */
+.breadcrumb_checkout {
+    list-style: none;
+    overflow: hidden;
+    margin: 40px;
+    padding: 0;
+}
+.breadcrumb_checkout li {
+    float: left;
+}
+.breadcrumb_checkout li a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 0 8px 55px;
+    background: brown; /* fallback color */
+    background-color: #60ab59;
+    position: relative;
+    display: block;
+    float: left;
+}
+@media (min-width: 768px) {
+    .breadcrumb_checkout li a:after {
+        content: " ";
+        display: block;
+        width: 0;
+        height: 0;
+        border-top: 50px solid transparent;           /* Go big on the size, and let overflow hide */
+        border-bottom: 50px solid transparent;
+        border-left: 30px solid  #60ab5973;
+        position: absolute;
+        top: 50%;
+        margin-top: -50px;
+        left: 100%;
+        z-index: 2;
+    }
+    .breadcrumb_checkout li a:before {
+        content: " ";
+        display: block;
+        width: 0;
+        height: 0;
+        border-top: 50px solid transparent;           /* Go big on the size, and let overflow hide */
+        border-bottom: 50px solid transparent;
+        border-left: 30px solid white;
+        position: absolute;
+        top: 50%;
+        margin-top: -50px;
+        margin-left:0px;
+        left: 100%;
+        z-index: 1;
+    }
+    .breadcrumb_checkout li.active a:after
+    {
+        content: " ";
+        display: block;
+        width: 0;
+        height: 0;
+        border-top: 50px solid transparent;           /* Go big on the size, and let overflow hide */
+        border-bottom: 50px solid transparent;
+        border-left: 30px solid  #60ab59;
+        position: absolute;
+        top: 50%;
+        margin-top: -50px;
+        left: 100%;
+        z-index: 2;
+    }
+}
+.breadcrumb_checkout li:first-child a {
+    padding-left: 10px;
+}
+
+.breadcrumb_checkout li.active
+{
+    background:        #60ab59;
+    color: #fff;
+}
+.breadcrumb_checkout li a
+{
+    background:        #60ab5973;
+    color: #fff;
+}
+.breadcrumb_checkout li a:hover
+{
+    background:        #60ab5973;
+    color: #fff;
+}
+.breadcrumb_checkout li a:visited
+{
+    background:        #60ab5973;
+    color: #fff;
+}
+.breadcrumb_checkout li a:focus
+{
+    background:        #60ab5973;
+    color: #fff;
+}
+.breadcrumb_checkout>li.disabled>a:hover {
+    background:        #60ab5973;
+    color: #fff;
+}
+.breadcrumb_checkout>li.disabled>a:visited {
+    background:        #60ab5973;
+    color: #fff;
+}
+.breadcrumb_checkout>li.disabled>a:focus {
+    background:        #60ab5973;
+    color: #fff;
+}
+
