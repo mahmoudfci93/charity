@@ -8,17 +8,21 @@
     <table class="table table-bordered">
         <tr>
             <th>Name</th>
+            <th>City</th>
             <th>Region</th>
-            <th>Mobile</th>
-            <th>Money</th>
+            <th>Mobile 1,2</th>
+            <th>Don. Type</th>
+            <th>Time to Send</th>
             <th>Created</th>
         </tr>
 
             <tr>
                 <td>{{$donnerUser->name}}</td>
                 <td>{{places()[$donner->place]}}</td>
-                <td>{{$donner->mobile}}</td>
-                <td>{{$donner->value}}</td>
+                <td>{{$donner->sub_place}}</td>
+                <td>{{$donner->mobile}},{{$donner->mobile2}}</td>
+                <td>{{$donner->value?donationType()[$donner->value]:$donner->other}}</td>
+                <td>{{pickTime()[$donner->time]}}</td>
                 <td>{{$donner->created_at}}</td>
             </tr>
 

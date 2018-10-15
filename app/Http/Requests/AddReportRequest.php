@@ -26,6 +26,7 @@ class AddReportRequest extends FormRequest
         return [
             'name'    =>'required|min:4|max:40',
             'place'   =>'required',
+            'sub_place'=>'required',
             'mobile'  =>'required',
             'problem' =>'required'
         ];

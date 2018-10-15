@@ -8,15 +8,16 @@
     <table class="table table-bordered">
         <tr>
             <th>Name</th>
+            <th>City</th>
             <th>Region</th>
             <th>Mobile</th>
             <th>Problem</th>
             <th>Created</th>
         </tr>
-
         <tr>
             <td>{{$reporter->name}}</td>
             <td>{{places()[$reporter->place]}}</td>
+            <td>{{$reporter->sub_place}}</td>
             <td>{{$reporter->mobile}}</td>
             <td>{{$reporter->problem}}</td>
             <td>{{$reporter->created_at}}</td>

@@ -24,9 +24,11 @@ class AddDonationRequest extends FormRequest
     public function rules()
     {
         return [
-            'place'    =>'required|min:4|max:100',
+            'full_name'=>'required',
+            'place'    =>'required',
+            'sub_place'=>'required',
+            'time'=>'required',
             'mobile'   =>'required',
-            'value'    =>'required|integer'
         ];
     }
 }

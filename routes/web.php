@@ -42,12 +42,6 @@ Route::group(['prefix'=>'admin-dashboard','middleware'=>['web','admin']],functio
 
     Route::resource('/users','AdminUsersController');
     Route::get('/getusers','AjaxDataController@getUsers')->name('ajaxUsers');
-
-
-
-
-
-
 });
 
 /////////////// user authenticated routes ///////////////

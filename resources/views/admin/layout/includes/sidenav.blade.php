@@ -3,7 +3,7 @@
     <div class="sidebar content-box" style="display: block;">
         <ul class="nav">
             <!-- Main menu -->
-            <li class="current"><a href="#"><i class="glyphicon glyphicon-home"></i>
+            <li class="current"><a href="{{url('/admin-dashboard')}}"><i class="glyphicon glyphicon-home"></i>
                     Dashboard</a></li>
             <li class="submenu">
                 <a href="#">

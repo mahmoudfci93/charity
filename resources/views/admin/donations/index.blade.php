@@ -12,7 +12,7 @@
         <tr>
             <th>#</th>
             <th>Region</th>
-            <th>Money</th>
+            <th>Type</th>
             <th>Confirmed</th>
             <th>Transportation</th>
             <th>Received</th>

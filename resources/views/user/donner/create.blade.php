@@ -31,7 +31,8 @@
 @endsection
 
 @section('footer')
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>>
     {!! Html::script('custom/js/select2.js') !!}
     <script type="text/javascript">
         $(document).ready(function() {
@@ -39,6 +40,29 @@
                 dir: "ltr"
             });
 
+        });
+    </script>
+    <script type="text/javascript">
+
+        $(document).ready(function(){
+
+            var counter = 1;
+
+            $("#addButton").click(function () {
+
+                if(counter>1){
+                    return false;
+                }
+
+                var newTextBoxDiv = $(document.createElement('div'))
+                    .attr("id", 'TextBoxDiv');
+
+                newTextBoxDiv.after().html('<label class="col-md-3 control-label">Other Donation'+ ' </label>' +
+                    '<input style="margin-left:16px;border-radius: 6px;width: 558px;height: 33px;" type="text" name="other" id="textbox"  value=""  >');
+                newTextBoxDiv.appendTo("#TextBoxesGroup");
+
+                counter++;
+            });
         });
     </script>
 @endsection

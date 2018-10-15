@@ -14,7 +14,7 @@
 <br>
 <br>
 <div class="form-group{{ $errors->has('place') ? ' has-error' : '' }}">
-    <label for="name" class="col-md-3 control-label"> Region </label>
+    <label for="name" class="col-md-3 control-label"> City </label>
 
     <div class="col-md-9">
         {!! Form::select("place",places(),null,['class'=>'form-control select2']) !!}
@@ -27,6 +27,19 @@
     </div>
 </div>
 <br>
+<div class="form-group{{ $errors->has('sub_place') ? ' has-error' : '' }}">
+    <label for="name" class="col-md-3 control-label">Region</label>
+
+    <div class="col-md-9">
+        <input id="name" type="text" class="form-control" name="sub_place" value="{{ old('sub_place') }}" required autofocus>
+
+        @if ($errors->has('sub_place'))
+            <span class="help-block">
+                                        <strong>{{ $errors->first('sub_place') }}</strong>
+                                    </span>
+        @endif
+    </div>
+</div>
 <br>
 <div class="form-group{{ $errors->has('mobile') ? ' has-error' : '' }}">
     <label for="name" class="col-md-3 control-label">Mobile No.</label>

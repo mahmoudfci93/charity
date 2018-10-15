@@ -26,6 +26,16 @@ class AjaxDataController extends Controller
             ->editColumn('confirm', function ($model) {
                 return $model->confirm == 0 ? '<span class="badge badge-info">' . 'Not Confirmed' . '</span>' : '<span class="badge badge-warning">' . 'Confirmed' . '</span>';
             })
+            ->editColumn('value', function ($model) {
+                if ($model->value == null){
+                    return  '<input class="badge badge-info">'.$model->other.'</input>';
+                }else
+                {
+                    $value = donationType();
+                    return  '<input class="badge badge-info">'.$value[$model->value].'</input>';
+                }
+
+            })
             ->editColumn('place', function ($model) {
                 $place = places();
                 return  '<input class="badge badge-info">'.$place[$model->place].'</input>';
@@ -42,7 +52,7 @@ class AjaxDataController extends Controller
 
                 return $all;
             })
-            ->rawColumns(['send_trans','place','received','confirm','control'])
+            ->rawColumns(['send_trans','place','received','confirm','value','control'])
             ->make(true);
 
     }

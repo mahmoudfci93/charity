@@ -18,6 +18,7 @@ class CreateReportsTable extends Migration
             $table->integer('user_id');
             $table->string('name');
             $table->string('place');
+            $table->string('sub_place');
             $table->string('mobile');
             $table->string('problem');
             $table->tinyInteger('accept')->nullable();

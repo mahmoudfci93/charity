@@ -34,21 +34,23 @@
                                                     </tr>
                                                     <tr>
                                                         <td>Name:</td>
-                                                        <td>{{$donner->name}}</td>
+                                                        <td>{{$donation->full_name}}</td>
                                                     </tr>
                                                     <tr>
-                                                        <td>Region</td>
-                                                        <td>{{places()[$donation->place]}}</td>
+                                                        <td>Donation</td>
+                                                        <td>{{$donation->value?donationType()[$donation->value]:$donation->other}}</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Address</td>
+                                                        <td>{{places()[$donation->place]}},{{$donation->sub_place}}</td>
                                                     </tr>
                                                     <tr>
                                                         <td>Mobile</td>
-                                                        <td>{{$donation->mobile}}</td>
+                                                        <td>{{$donation->mobile}},{{$donation->mobile2}}</td>
                                                     </tr>
-
                                                     <tr>
-                                                    <tr>
-                                                        <td>Problem</td>
-                                                        <td>{{$donation->value}}</td>
+                                                        <td>Time Free</td>
+                                                        <td>{{pickTime()[$donation->time]}}</td>
                                                     </tr>
                                                     <tr>
                                                         <td>Donation State </td>

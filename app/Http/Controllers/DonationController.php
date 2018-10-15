@@ -41,6 +41,10 @@ class DonationController extends Controller
     public function store(AddDonationRequest $request)
     {
         $donner = Auth::user();
+        if ($request->value == null && $request->other == null)
+        {
+            return Redirect::back()->withFlashMessage('You must enter donation value');
+        }
         $donner->donner()->create($request->all());
         return Redirect::route('donations.show',$donner->id)->withFlashMessage('Your donation submitted Successfully');
     }

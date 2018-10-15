@@ -9,6 +9,23 @@ function contact()
             '4' => 'Inquiry'
         ];
 }
+function donationType()
+{
+    return[
+        'd-1'=>'Money',
+        'd-2'=>'Clothes',
+        'd-3'=>'Drugs',
+        'd-4'=>'Education'
+    ];
+}
+function pickTime()
+{
+    return [
+        't-1'=>'9 am - 12 pm',
+        't-2'=>'1 pm - 5 pm',
+        't-3'=>'6 pm - 11 pm'
+    ];
+}
 function unreadMessages()
 {
     return \App\Contact::where('view',0)->get();

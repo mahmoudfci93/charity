@@ -13,8 +13,7 @@
                     <nav class="collapse navbar-collapse bs-navbar-collapse navbar-right" role="navigation">
                         <ul class="nav navbar-nav">
                             <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{Auth::user()->name}} <b
-                                            class="caret"></b></a>
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{Auth::user()->name}} <i class="fas fa-caret-down" style="font-size: 15px"></i></a>
                                 <ul class="dropdown-menu animated fadeInUp">
                                     <li><a href="{{route('logout')}}">Front End</a></li>
                                     <li><a href="{{url('/logout')}}">Logout</a></li>
@@ -29,10 +28,10 @@
                     <nav class="collapse navbar-collapse bs-navbar-collapse navbar-right" role="navigation">
                         <ul class="nav navbar-nav">
                             <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="far fa-envelope" style="font-size: 20px"></i> <b class="caret"></b></a>
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="far fa-envelope" style="font-size: 20px"></i><span class="label label-default">{{countUnreadMessages()}}</span> <i class="fas fa-caret-down" style="font-size: 20px"></i></a>
                                 <ul class="dropdown-menu alert-dropdown">
                                     <li>
-                                        <a href="#">New Messages <span class="label label-default">{{countUnreadMessages()}}</span></a>
+                                        <a href="{{route('contact.index')}}">New Messages <span class="label label-default">{{countUnreadMessages()}}</span></a>
                                     </li>
                                     @foreach(unreadMessages() as $key=>$unreadMessage)
                                         <li><!-- Task item -->
